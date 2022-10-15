@@ -8770,9 +8770,6 @@ const ProductList = ({
       }), " ", /* @__PURE__ */ jsxs("div", {
         className: "btn-pl-container",
         children: [/* @__PURE__ */ jsxs(Link, {
-          style: {
-            textDecoration: "none"
-          },
           to: `/batchs/${product.idFirebase}`,
           children: [/* @__PURE__ */ jsx(Button, {
             text: "see more",
@@ -27553,7 +27550,87 @@ const Home = () => {
   });
 };
 const batchBtn = "";
+const BatchBtn = ({
+  text
+}) => {
+  return /* @__PURE__ */ jsxs("div", {
+    children: [/* @__PURE__ */ jsxs("button", {
+      className: "batch-btn",
+      children: [" ", text, " "]
+    }), " "]
+  });
+};
 const batchlist = "";
+const BatchList = ({
+  batch
+}) => {
+  const {
+    name: name2,
+    photo,
+    kg: kg2,
+    quality,
+    size
+  } = batch;
+  return /* @__PURE__ */ jsxs("div", {
+    className: "batch-list",
+    children: [/* @__PURE__ */ jsx("img", {
+      className: "batch-list-img",
+      src: `${photo}`
+    }), " ", /* @__PURE__ */ jsxs("div", {
+      className: "batch-list-description",
+      children: [/* @__PURE__ */ jsxs("ul", {
+        children: [/* @__PURE__ */ jsxs("li", {
+          children: [/* @__PURE__ */ jsx("span", {
+            className: "batch-list-field",
+            children: " Batch: "
+          }), " ", /* @__PURE__ */ jsxs("span", {
+            className: "batch-list-value",
+            children: [" ", name2, " "]
+          }), " "]
+        }), " ", /* @__PURE__ */ jsxs("li", {
+          children: [/* @__PURE__ */ jsx("span", {
+            className: "batch-list-field",
+            children: " Kg: "
+          }), " ", /* @__PURE__ */ jsxs("span", {
+            className: "batch-list-value",
+            children: [" ", kg2, " "]
+          }), " "]
+        }), " ", /* @__PURE__ */ jsxs("li", {
+          children: [/* @__PURE__ */ jsx("span", {
+            className: "batch-list-field",
+            children: " Quality: "
+          }), " ", /* @__PURE__ */ jsxs("span", {
+            className: "batch-list-value",
+            children: [" ", quality, " "]
+          }), " "]
+        }), " ", /* @__PURE__ */ jsxs("li", {
+          children: [/* @__PURE__ */ jsxs("span", {
+            className: "batch-list-field",
+            children: [/* @__PURE__ */ jsx("span", {
+              className: "batch-list-field",
+              children: " Size: "
+            }), " "]
+          }), " ", /* @__PURE__ */ jsxs("span", {
+            className: "batch-list-value",
+            children: [" ", size, " "]
+          }), " "]
+        }), " "]
+      }), " ", /* @__PURE__ */ jsxs("div", {
+        className: "batch-btn-container",
+        children: [/* @__PURE__ */ jsx(Link, {
+          children: /* @__PURE__ */ jsx(BatchBtn, {
+            text: "Buy Now"
+          })
+        }), " ", /* @__PURE__ */ jsx(Link, {
+          to: `/batchs/detail/${batch.idFirebase}`,
+          children: /* @__PURE__ */ jsx(BatchBtn, {
+            text: "Details"
+          })
+        })]
+      })]
+    })]
+  });
+};
 const batchHeader = "";
 const logo = "";
 const Logo = () => {
@@ -27619,7 +27696,11 @@ const BatchListContainer = () => {
       children: /* @__PURE__ */ jsx(BatchLink, {
         text: "HOME/BATCHCATALOG"
       })
-    })]
+    }), batchs ? batchs.map((batch) => {
+      return /* @__PURE__ */ jsx(BatchList, {
+        batch
+      }, batch.idFirebase);
+    }) : /* @__PURE__ */ jsx(Spinner, {})]
   });
 };
 const batchDetail = "";
