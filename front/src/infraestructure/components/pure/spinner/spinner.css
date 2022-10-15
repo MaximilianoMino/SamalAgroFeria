@@ -1,0 +1,31 @@
+.spinner-container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+}
+
+.loading-spinner {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    border: 0.4em solid transparent;
+    border-color: #eee;
+    border-top-color: #c81f0e;
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+    z-index: 999999;
+}
+
+@keyframes loadingspin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

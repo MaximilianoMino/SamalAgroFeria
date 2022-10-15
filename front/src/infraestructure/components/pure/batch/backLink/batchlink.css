@@ -1,0 +1,30 @@
+.batch-list-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 19px;
+    width: 350px;
+    margin-top: 11em;
+}
+
+.batch-link-text {
+    color: #808080;
+    margin-left: 1em;
+    font-size: 14px;
+}
+
+.batch-link-text::before {
+    border-bottom: 1px solid #808080;
+    content: "";
+    margin-top: 1.14em;
+    width: 35px;
+    margin-left: 1px;
+    position: absolute;
+}
+
+.batch-list-ra-icon {
+    transform: rotate(180deg);
+    margin-top: 0.2em;
+    width: 14px;
+    height: 12px;
+    position: absolute;
+}

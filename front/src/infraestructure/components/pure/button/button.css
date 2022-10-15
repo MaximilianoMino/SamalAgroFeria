@@ -1,0 +1,21 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-weight: 641;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-stretch: 100;
+    height: 30px;
+    width: 100px;
+    background: #c81f0e;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}

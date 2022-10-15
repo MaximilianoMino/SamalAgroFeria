@@ -1,0 +1,19 @@
+.our-products {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    height: 35px;
+    text-align: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 641;
+    font-size: 30px;
+    line-height: 35px;
+    color: #808080;
+    font-stretch: 100;
+    mix-blend-mode: darken;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
