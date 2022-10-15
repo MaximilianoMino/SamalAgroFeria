@@ -56,11 +56,6 @@
     font-stretch: 100;
 }
 
-@font-face {
-    font-family: "Montserrat";
-    src: local("Montserrat"), url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
-}
-
 .btn-pl-container {
     position: absolute;
     bottom: 4em;
@@ -299,11 +294,6 @@
     border-radius: 0 0 10px 10px;
 }
 
-@font-face {
-    font-family: "Poppins";
-    src: local("Poppins"), url("/assets/Poppins-Regular.707fdc5c.ttf") format("truetype");
-}
-
 .batch-img-header {
     height: 100%;
     width: 100%;
@@ -375,11 +365,6 @@
     margin-left: 23px;
     margin-top: 20px;
     margin: 20px auto 0 auto;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: local("Montserrat"), url("/assets/Montserrat-Medium.20ebfd65.ttf") format("truetype");
 }
 
 .batch-detail-title {
@@ -491,9 +476,4 @@
 
 a {
     text-decoration: none;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: local("Montserrat"), url("/assets/Montserrat-VariableFont_wght.a4fe82b4.ttf") format("truetype");
 }
